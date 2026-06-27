@@ -212,3 +212,11 @@ justify-content:center;
 }
 
 }
+
+#libro p{
+    margin-bottom:30px;
+}
+
+#libro .btn{
+    margin-top:0;
+}
