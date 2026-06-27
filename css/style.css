@@ -212,11 +212,12 @@ justify-content:center;
 }
 
 #libro p{
-    margin-bottom:30px;
+    margin-bottom:40px;
 }
 
 #libro .btn{
-    margin-top:0;
+    display:inline-block;
+    margin-top:20px;
 }
 
 }
