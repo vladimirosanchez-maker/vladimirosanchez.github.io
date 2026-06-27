@@ -219,6 +219,24 @@ justify-content:center;
     display:inline-block;
     margin-top:20px;
 }
+.hero{
 
+width:100%;
+
+padding:0;
+
+margin-top:85px;
+
+background:black;
+
+}
+
+.hero-image{
+
+width:100%;
+
+display:block;
+
+}
 }
 
