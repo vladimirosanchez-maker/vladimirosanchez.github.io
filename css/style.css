@@ -221,22 +221,28 @@ justify-content:center;
 }
 .hero{
 
-width:100%;
+    margin-top:85px;
 
-padding:0;
+    display:flex;
 
-margin-top:85px;
+    justify-content:center;
 
-background:black;
+    background:#000;
+
+    overflow:hidden;
 
 }
 
 .hero-image{
 
-width:100%;
+    width:100%;
 
-display:block;
+    max-width:1400px;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:8px;
 
 }
-}
-
