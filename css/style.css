@@ -96,17 +96,85 @@ header{
 
 }
 
-.logo h2{
+/*=========================
+LOGO
+==========================*/
 
-    font-family:var(--fuenteTitulo);
+.logo{
 
-    color:var(--dorado);
+display:flex;
 
-    font-size:48px;
+align-items:center;
 
-    font-weight:700;
+gap:18px;
 
-    letter-spacing:2px;
+}
+
+.logo-icono{
+
+width:68px;
+
+height:68px;
+
+border:2px solid var(--dorado);
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-family:var(--fuenteTitulo);
+
+font-size:28px;
+
+font-weight:700;
+
+color:var(--dorado);
+
+transition:.4s;
+
+}
+
+.logo-icono:hover{
+
+background:var(--dorado);
+
+color:#000;
+
+transform:rotate(8deg);
+
+}
+
+.logo-texto h2{
+
+font-size:24px;
+
+margin:0;
+
+font-family:var(--fuenteTitulo);
+
+color:#fff;
+
+font-weight:700;
+
+}
+
+.logo-texto span{
+
+display:block;
+
+margin-top:4px;
+
+font-size:14px;
+
+color:var(--dorado);
+
+letter-spacing:1px;
+
+text-transform:uppercase;
 
 }
 
@@ -136,77 +204,79 @@ header{
 
 .menu a{
 
-    color:white;
+position:relative;
 
-    text-decoration:none;
+font-size:17px;
 
-    font-size:16px;
+font-weight:600;
 
-    font-weight:600;
+color:#fff;
 
-    position:relative;
+text-decoration:none;
 
-    transition:all .35s;
+transition:.35s;
+
+padding-bottom:6px;
 
 }
 
 .menu a::after{
 
-    content:"";
+content:"";
 
-    position:absolute;
+position:absolute;
 
-    left:0;
+left:0;
 
-    bottom:-8px;
+bottom:0;
 
-    width:0;
+width:0;
 
-    height:2px;
+height:2px;
 
-    background:var(--dorado);
+background:var(--dorado);
 
-    transition:.35s;
-
-}
-
-.menu a:hover::after{
-
-    width:100%;
+transition:.35s;
 
 }
 
 .menu a:hover{
 
-    color:var(--dorado);
+color:var(--dorado);
+
+}
+
+.menu a:hover::after{
+
+width:100%;
 
 }
 
 .btn-header{
 
-    background:var(--dorado);
+background:linear-gradient(135deg,#D4AF37,#f3d56b);
 
-    color:#000;
+color:#111;
 
-    text-decoration:none;
+padding:16px 34px;
 
-    padding:16px 34px;
+border-radius:40px;
 
-    border-radius:50px;
+font-weight:700;
 
-    font-weight:700;
+text-decoration:none;
 
-    font-size:15px;
+transition:.35s;
 
-    transition:.35s;
+box-shadow:0 12px 25px rgba(212,175,55,.30);
 
 }
 
 .btn-header:hover{
 
-    transform:translateY(-3px);
+transform:translateY(-4px);
 
-    box-shadow:var(--sombra);
+box-shadow:0 20px 40px rgba(212,175,55,.45);
 
 }
 
