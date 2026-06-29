@@ -223,11 +223,24 @@ HERO
 
 .hero{
 
-padding-top:150px;
+position:relative;
 
-padding-bottom:80px;
+padding-top:170px;
 
-background:var(--negro);
+padding-bottom:140px;
+
+overflow:hidden;
+
+background:
+radial-gradient(circle at 80% 30%,
+rgba(212,175,55,.12),
+transparent 30%),
+
+linear-gradient(
+180deg,
+#080808 0%,
+#0d0d0d 100%
+);
 
 }
 
@@ -235,11 +248,11 @@ background:var(--negro);
 
 display:grid;
 
-grid-template-columns:1.1fr .9fr;
+grid-template-columns:58% 42%;
 
 align-items:center;
 
-gap:80px;
+gap:70px;
 
 }
 
@@ -263,13 +276,15 @@ text-transform:uppercase;
 
 .hero-texto h1{
 
-font-size:82px;
+font-size:96px;
 
-line-height:0.95;
+line-height:.92;
 
 font-weight:800;
 
-margin-bottom:30px;
+letter-spacing:-2px;
+
+margin-bottom:35px;
 
 }
 
@@ -281,27 +296,18 @@ color:var(--dorado);
 
 .hero-texto h3{
 
-font-size:34px;
+font-size:28px;
 
-line-height:1.4;
+font-weight:600;
 
-font-weight:500;
+line-height:1.45;
 
-margin-bottom:35px;
+margin-bottom:30px;
 
 }
+
 
 .hero-texto p{
-
-font-size:22px;
-
-line-height:1.8;
-
-color:var(--gris);
-
-max-width:620px;
-
-}
 
 .hero-botones{
 
