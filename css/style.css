@@ -91,13 +91,15 @@ border-bottom:1px solid rgba(255,255,255,.05);
 
 .navbar{
 
-height:90px;
-
 display:flex;
 
 align-items:center;
 
 justify-content:space-between;
+
+height:90px;
+
+gap:40px;
 
 }
 
@@ -159,7 +161,11 @@ color:var(--dorado);
 
 display:flex;
 
+align-items:center;
+
 gap:35px;
+
+margin-left:auto;
 
 }
 
@@ -195,6 +201,8 @@ font-weight:700;
 
 transition:.3s;
 
+flex-shrink:0;
+
 }
 
 .btn-header:hover{
@@ -227,11 +235,11 @@ background:var(--negro);
 
 display:grid;
 
-grid-template-columns:1fr 1fr;
+grid-template-columns:1.1fr .9fr;
 
 align-items:center;
 
-gap:70px;
+gap:80px;
 
 }
 
@@ -371,11 +379,15 @@ align-items:center;
 
 width:100%;
 
-max-width:560px;
+max-width:420px;
 
-border-radius:28px;
+height:auto;
 
-box-shadow:0 35px 80px rgba(0,0,0,.45);
+border-radius:24px;
+
+object-fit:cover;
+
+box-shadow:0 30px 60px rgba(0,0,0,.45);
 
 }
 
