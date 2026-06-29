@@ -68,7 +68,7 @@ header{
 
     width:100%;
 
-    height:90px;
+    height:100px;
 
     background:rgba(11,11,11,.92);
 
@@ -82,7 +82,7 @@ header{
 
 .navbar{
 
-    width:min(1280px,92%);
+    width:min(1400px,94%);
 
     height:100%;
 
@@ -102,7 +102,9 @@ header{
 
     color:var(--dorado);
 
-    font-size:34px;
+    font-size:48px;
+
+    font-weight:700;
 
     letter-spacing:2px;
 
@@ -110,11 +112,13 @@ header{
 
 .logo p{
 
-    color:var(--gris);
+    color:#b5b5b5;
 
-    font-size:13px;
+    font-size:14px;
 
-    margin-top:-3px;
+    letter-spacing:1px;
+
+    margin-top:-6px;
 
 }
 
@@ -124,7 +128,9 @@ header{
 
     list-style:none;
 
-    gap:38px;
+    gap:50px;
+
+    align-items:center;
 
 }
 
@@ -134,9 +140,39 @@ header{
 
     text-decoration:none;
 
-    font-weight:500;
+    font-size:16px;
 
-    transition:var(--transicion);
+    font-weight:600;
+
+    position:relative;
+
+    transition:all .35s;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--dorado);
+
+    transition:.35s;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
 
 }
 
@@ -150,17 +186,19 @@ header{
 
     background:var(--dorado);
 
-    color:black;
+    color:#000;
 
     text-decoration:none;
 
-    padding:14px 26px;
+    padding:16px 34px;
 
     border-radius:50px;
 
     font-weight:700;
 
-    transition:var(--transicion);
+    font-size:15px;
+
+    transition:.35s;
 
 }
 
