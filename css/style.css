@@ -1,37 +1,31 @@
-/* =======================================================
-   VLADIMIRO SÁNCHEZ | RECONSTRUYE TU VIDA
-   Style.css V2.1
-======================================================= */
+/*==================================================
+Vladimiro Sánchez | V3
+==================================================*/
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* VARIABLES */
 
 :root{
 
-    --negro:#0B0B0B;
-    --negro2:#161616;
+    --negro:#090909;
+    --negro2:#111111;
     --dorado:#D4AF37;
     --blanco:#FFFFFF;
-    --gris:#BDBDBD;
+    --gris:#B5B5B5;
 
-    --fuenteTitulo:'Poppins',sans-serif;
-    --fuenteTexto:'Inter',sans-serif;
-
-    --radio:18px;
-
-    --sombra:0 15px 40px rgba(0,0,0,.35);
-
-    --transicion:.35s;
+    --titulo:'Poppins',sans-serif;
+    --texto:'Inter',sans-serif;
 
 }
 
-/* =======================================================
-RESET
-======================================================= */
+/* RESET */
 
 *{
 
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
 
 }
@@ -45,20 +39,45 @@ html{
 body{
 
     background:var(--negro);
-
     color:var(--blanco);
-
-    font-family:var(--fuenteTexto);
-
+    font-family:var(--texto);
     overflow-x:hidden;
 
 }
 
-/* =======================================================
-HEADER
-======================================================= */
+img{
 
-header{
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/* CONTENEDOR */
+
+.container{
+
+    width:min(92%,1280px);
+    margin:auto;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.header{
 
     position:fixed;
 
@@ -68,25 +87,21 @@ header{
 
     width:100%;
 
-    height:100px;
+    height:90px;
 
-    background:rgba(11,11,11,.92);
+    background:rgba(9,9,9,.92);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 
     z-index:999;
-
-    border-bottom:1px solid rgba(255,255,255,.05);
 
 }
 
 .navbar{
 
-    width:min(1400px,94%);
-
-    height:100%;
-
-    margin:auto;
+    height:90px;
 
     display:flex;
 
@@ -96,877 +111,169 @@ header{
 
 }
 
-/*=========================
-LOGO
-==========================*/
+/*========== LOGO ==========*/
 
 .logo{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:18px;
+    gap:16px;
 
-}
-
-.logo-icono{
-
-width:68px;
-
-height:68px;
-
-border:2px solid var(--dorado);
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-family:var(--fuenteTitulo);
-
-font-size:28px;
-
-font-weight:700;
-
-color:var(--dorado);
-
-transition:.4s;
+    color:#fff;
 
 }
 
-.logo-icono:hover{
+.logo-vs{
 
-background:var(--dorado);
+    width:58px;
 
-color:#000;
+    height:58px;
 
-transform:rotate(8deg);
+    border:2px solid var(--dorado);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--dorado);
+
+    font-family:var(--titulo);
+
+    font-size:24px;
+
+    font-weight:700;
 
 }
 
-.logo-texto h2{
+.logo-texto h1{
 
-font-size:24px;
+    font-size:24px;
 
-margin:0;
+    font-family:var(--titulo);
 
-font-family:var(--fuenteTitulo);
-
-color:#fff;
-
-font-weight:700;
+    font-weight:700;
 
 }
 
 .logo-texto span{
 
-display:block;
+    color:var(--dorado);
 
-margin-top:4px;
+    font-size:13px;
 
-font-size:14px;
+    letter-spacing:2px;
 
-color:var(--dorado);
-
-letter-spacing:1px;
-
-text-transform:uppercase;
+    text-transform:uppercase;
 
 }
 
-.logo p{
+/*========== MENÚ ==========*/
 
-    color:#b5b5b5;
-
-    font-size:14px;
-
-    letter-spacing:1px;
-
-    margin-top:-6px;
-
-}
-
-.menu{
+.nav-menu{
 
     display:flex;
 
-    list-style:none;
-
-    gap:50px;
-
-    align-items:center;
+    gap:38px;
 
 }
 
-.menu a{
+.nav-menu a{
 
-position:relative;
+    color:white;
 
-font-size:17px;
+    font-size:16px;
 
-font-weight:600;
+    font-weight:500;
 
-color:#fff;
+    position:relative;
 
-text-decoration:none;
-
-transition:.35s;
-
-padding-bottom:6px;
+    transition:.35s;
 
 }
 
-.menu a::after{
+.nav-menu a:hover{
 
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:0;
-
-width:0;
-
-height:2px;
-
-background:var(--dorado);
-
-transition:.35s;
+    color:var(--dorado);
 
 }
 
-.menu a:hover{
+.nav-menu a::after{
 
-color:var(--dorado);
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--dorado);
+
+    transition:.35s;
 
 }
 
-.menu a:hover::after{
+.nav-menu a:hover::after{
 
-width:100%;
+    width:100%;
 
 }
+
+/*========== BOTÓN ==========*/
 
 .btn-header{
 
-background:linear-gradient(135deg,#D4AF37,#f3d56b);
+    background:var(--dorado);
 
-color:#111;
+    color:#111;
 
-padding:16px 34px;
+    padding:15px 28px;
 
-border-radius:40px;
+    border-radius:40px;
 
-font-weight:700;
+    font-weight:700;
 
-text-decoration:none;
-
-transition:.35s;
-
-box-shadow:0 12px 25px rgba(212,175,55,.30);
+    transition:.35s;
 
 }
 
 .btn-header:hover{
 
-transform:translateY(-4px);
-
-box-shadow:0 20px 40px rgba(212,175,55,.45);
+    transform:translateY(-3px);
 
 }
 
-/* =======================================================
-HERO
-======================================================= */
+/*========== MENÚ MÓVIL ==========*/
 
-.hero{
+.menu-toggle{
 
-    width:min(1280px,92%);
+    display:none;
 
-    margin:0 auto;
-
-    min-height:100vh;
-
-    display:grid;
-
-    grid-template-columns:1.1fr .9fr;
-
-    align-items:center;
-
-    gap:70px;
-
-    padding-top:120px;
-
-    padding-bottom:80px;
-
-}
-
-.hero-texto{
-
-    animation:aparecerIzquierda 1s ease;
-
-}
-
-.etiqueta{
-
-    display:inline-block;
-
-    background:rgba(212,175,55,.15);
-
-    color:var(--dorado);
-
-    padding:10px 20px;
-
-    border-radius:40px;
-
-    font-size:14px;
-
-    letter-spacing:1px;
-
-    margin-bottom:30px;
-
-}
-
-.hero h1{
-
-    font-family:var(--fuenteTitulo);
-
-    font-size:64px;
-
-    line-height:1.1;
-
-    margin-bottom:25px;
-
-}
-
-.hero p{
-
-    color:var(--gris);
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    max-width:620px;
-
-    margin-bottom:45px;
-
-}
-
-.hero-botones{
-
-    display:flex;
-
-    gap:20px;
-
-    flex-wrap:wrap;
-
-}
-
-.btn-principal{
-
-    background:var(--dorado);
-
-    color:#000;
-
-    text-decoration:none;
-
-    padding:18px 34px;
-
-    border-radius:50px;
-
-    font-weight:700;
-
-    transition:var(--transicion);
-
-}
-
-.btn-principal:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:var(--sombra);
-
-}
-
-.btn-secundario{
-
-    border:2px solid var(--dorado);
-
-    color:var(--dorado);
-
-    text-decoration:none;
-
-    padding:18px 34px;
-
-    border-radius:50px;
-
-    font-weight:700;
-
-    transition:var(--transicion);
-
-}
-
-.btn-secundario:hover{
-
-    background:var(--dorado);
-
-    color:#000;
-
-}
-
-.hero-imagen{
-
-    display:flex;
-
-    justify-content:center;
-
-    animation:aparecerDerecha 1s ease;
-
-}
-
-.hero-imagen img{
-
-    width:100%;
-
-    max-width:480px;
-
-    border-radius:24px;
-
-    box-shadow:var(--sombra);
-
-}
-
-/* =======================================================
-ANIMACIONES
-======================================================= */
-
-@keyframes aparecerIzquierda{
-
-    from{
-
-        opacity:0;
-
-        transform:translateX(-60px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateX(0);
-
-    }
-
-}
-
-@keyframes aparecerDerecha{
-
-    from{
-
-        opacity:0;
-
-        transform:translateX(60px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateX(0);
-
-    }
-
-}
-
-/* =======================================================
-INDICADORES
-======================================================= */
-
-.indicadores{
-
-    width:min(1280px,92%);
-
-    margin:0 auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-    padding:80px 0;
-
-}
-
-.indicador{
-
-    background:var(--negro2);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    transition:var(--transicion);
-
-}
-
-.indicador:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--dorado);
-
-}
-
-.indicador h3{
-
-    font-family:var(--fuenteTitulo);
-
-    font-size:48px;
-
-    color:var(--dorado);
-
-    margin-bottom:15px;
-
-}
-
-.indicador p{
-
-    color:var(--gris);
-
-    line-height:1.7;
-
-}
-
-/* =======================================================
-INDICADORES
-======================================================= */
-
-.indicadores{
-
-    width:min(1280px,92%);
-
-    margin:0 auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-    padding:80px 0;
-
-}
-
-.indicador{
-
-    background:var(--negro2);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    transition:var(--transicion);
-
-}
-
-.indicador:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--dorado);
-
-}
-
-.indicador h3{
-
-    font-family:var(--fuenteTitulo);
-
-    font-size:48px;
-
-    color:var(--dorado);
-
-    margin-bottom:15px;
-
-}
-
-.indicador p{
-
-    color:var(--gris);
-
-    line-height:1.7;
-
-}
-
-/* =======================================================
-TITULOS CENTRADOS
-======================================================= */
-
-.titulo-centro{
-
-    text-align:center;
-
-    margin-bottom:70px;
-
-}
-
-.titulo-centro span{
-
-    color:var(--dorado);
-
-    letter-spacing:2px;
-
-    font-size:14px;
-
-}
-
-.titulo-centro h2{
-
-    margin-top:15px;
-
-    font-family:var(--fuenteTitulo);
-
-    font-size:50px;
-
-}
-
-/* =======================================================
-SERVICIOS
-======================================================= */
-
-.servicios{
-
-    width:min(1280px,92%);
-
-    margin:120px auto;
-
-}
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-}
-
-.card{
-
-    background:var(--negro2);
-
-    border:1px solid rgba(255,255,255,.06);
-
-    border-radius:24px;
-
-    padding:45px 35px;
-
-    transition:var(--transicion);
-
-}
-
-.card:hover{
-
-    transform:translateY(-12px);
-
-    border-color:var(--dorado);
-
-    box-shadow:var(--sombra);
-
-}
-
-.icono{
-
-    font-size:54px;
-
-    margin-bottom:25px;
-
-}
-
-.card h3{
-
-    font-family:var(--fuenteTitulo);
-
-    font-size:28px;
-
-    margin-bottom:20px;
-
-}
-
-.card p{
-
-    color:var(--gris);
-
-    line-height:1.8;
-
-}
-
-/* =======================================================
-LIBRO
-======================================================= */
-
-.libro{
-
-    width:min(1280px,92%);
-
-    margin:140px auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:90px;
-
-    align-items:center;
-
-}
-
-.libro-texto h2{
-
-    font-family:var(--fuenteTitulo);
-
-    font-size:52px;
-
-    margin:20px 0;
-
-}
-
-.libro-texto p{
-
-    color:var(--gris);
-
-    font-size:19px;
-
-    line-height:1.9;
-
-    margin-bottom:40px;
-
-}
-
-.libro-imagen{
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.libro-imagen img{
-
-    width:100%;
-
-    max-width:360px;
-
-    transition:var(--transicion);
-
-    filter:drop-shadow(0 25px 40px rgba(0,0,0,.45));
-
-}
-
-.libro-imagen img:hover{
-
-    transform:rotate(-3deg) scale(1.04);
-
-}
-
-/* =======================================================
-TESTIMONIOS
-======================================================= */
-
-.testimonios{
-
-    width:min(1280px,92%);
-
-    margin:140px auto;
-
-}
-
-.testimonios .cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.testimonios .card{
-
-    background:var(--negro2);
-
-    border-radius:24px;
-
-    padding:40px;
-
-    border:1px solid rgba(255,255,255,.05);
-
-}
-
-.testimonios .card p{
-
-    color:var(--gris);
-
-    line-height:1.8;
-
-    margin-bottom:25px;
-
-}
-
-.testimonios h4{
-
-    color:var(--dorado);
-
-}
-
-/* =======================================================
-CONTACTO
-======================================================= */
-
-.contacto{
-
-    width:min(1000px,92%);
-
-    margin:150px auto;
-
-    text-align:center;
-
-}
-
-.contacto p{
-
-    color:var(--gris);
-
-    margin:25px 0 45px;
-
-    font-size:20px;
-
-}
-
-.contacto-botones{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    flex-wrap:wrap;
-
-}
-
-/* =======================================================
-FOOTER
-======================================================= */
-
-footer{
-
-    background:#050505;
-
-    padding:70px 20px;
-
-    text-align:center;
-
-    border-top:1px solid rgba(255,255,255,.05);
-
-}
-
-.footer-logo h2{
-
-    color:var(--dorado);
-
-    font-family:var(--fuenteTitulo);
+    color:white;
 
     font-size:34px;
 
-}
-
-.footer-logo p{
-
-    color:var(--gris);
-
-    margin-top:8px;
-
-    margin-bottom:35px;
+    cursor:pointer;
 
 }
 
-footer p{
+/*==================================================
+RESPONSIVE HEADER
+==================================================*/
 
-    color:#888;
+@media (max-width:900px){
 
-}
-
-/* =======================================================
-RESPONSIVE
-======================================================= */
-
-@media(max-width:1100px){
-
-.hero{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.hero p{
-
-margin:auto auto 40px;
-
-}
-
-.hero-botones{
-
-justify-content:center;
-
-}
-
-.sobre{
-
-grid-template-columns:1fr;
-
-}
-
-.libro{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.indicadores{
-
-grid-template-columns:1fr;
-
-}
-
-.menu{
+.nav-menu{
 
 display:none;
 
@@ -978,5 +285,46 @@ display:none;
 
 }
 
+.menu-toggle{
+
+display:block;
+
 }
 
+.logo-texto h1{
+
+font-size:18px;
+
+}
+
+.logo-texto span{
+
+font-size:11px;
+
+letter-spacing:1px;
+
+}
+
+.logo-vs{
+
+width:48px;
+
+height:48px;
+
+font-size:20px;
+
+}
+
+.header{
+
+height:80px;
+
+}
+
+.navbar{
+
+height:80px;
+
+}
+
+}
