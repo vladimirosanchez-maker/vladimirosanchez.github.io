@@ -1,279 +1,445 @@
-/*==================================================
-Vladimiro Sánchez | V3
-==================================================*/
+/*=========================================
+Vladimiro Sánchez V3
+=========================================*/
 
-/* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
-
-/* VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root{
 
-    --negro:#090909;
-    --negro2:#111111;
-    --dorado:#D4AF37;
-    --blanco:#FFFFFF;
-    --gris:#B5B5B5;
-
-    --titulo:'Poppins',sans-serif;
-    --texto:'Inter',sans-serif;
+--negro:#080808;
+--negro2:#111111;
+--dorado:#D4AF37;
+--blanco:#ffffff;
+--gris:#b8b8b8;
 
 }
 
-/* RESET */
-
 *{
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 
 }
 
 html{
 
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 
 }
 
 body{
 
-    background:var(--negro);
-    color:var(--blanco);
-    font-family:var(--texto);
-    overflow-x:hidden;
+background:var(--negro);
+color:white;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
 
 }
 
 img{
 
-    max-width:100%;
-    display:block;
+display:block;
+max-width:100%;
 
 }
 
 a{
 
-    text-decoration:none;
+text-decoration:none;
 
 }
 
 ul{
 
-    list-style:none;
+list-style:none;
 
 }
-
-/* CONTENEDOR */
 
 .container{
 
-    width:min(92%,1280px);
-    margin:auto;
+width:min(92%,1280px);
+margin:auto;
 
 }
 
-/*==================================================
+/*=========================================
 HEADER
-==================================================*/
+=========================================*/
 
 .header{
 
-    position:fixed;
+position:fixed;
 
-    top:0;
+top:0;
 
-    left:0;
+left:0;
 
-    width:100%;
+width:100%;
 
-    height:90px;
+height:90px;
 
-    background:rgba(9,9,9,.92);
+background:rgba(0,0,0,.92);
 
-    backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+z-index:1000;
 
-    z-index:999;
+border-bottom:1px solid rgba(255,255,255,.05);
 
 }
 
 .navbar{
 
-    height:90px;
+height:90px;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    justify-content:space-between;
+justify-content:space-between;
 
 }
-
-/*========== LOGO ==========*/
 
 .logo{
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    gap:16px;
+gap:15px;
 
-    color:#fff;
-
-}
-
-.logo-vs{
-
-    width:58px;
-
-    height:58px;
-
-    border:2px solid var(--dorado);
-
-    border-radius:50%;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:var(--dorado);
-
-    font-family:var(--titulo);
-
-    font-size:24px;
-
-    font-weight:700;
+color:white;
 
 }
 
-.logo-texto h1{
+.logo-circulo{
 
-    font-size:24px;
+width:60px;
 
-    font-family:var(--titulo);
+height:60px;
 
-    font-weight:700;
+border-radius:50%;
 
-}
+border:2px solid var(--dorado);
 
-.logo-texto span{
+display:flex;
 
-    color:var(--dorado);
+justify-content:center;
 
-    font-size:13px;
+align-items:center;
 
-    letter-spacing:2px;
+color:var(--dorado);
 
-    text-transform:uppercase;
+font-size:28px;
 
-}
-
-/*========== MENÚ ==========*/
-
-.nav-menu{
-
-    display:flex;
-
-    gap:38px;
+font-weight:700;
 
 }
 
-.nav-menu a{
+.logo-info h2{
 
-    color:white;
+font-size:24px;
 
-    font-size:16px;
-
-    font-weight:500;
-
-    position:relative;
-
-    transition:.35s;
+font-weight:700;
 
 }
 
-.nav-menu a:hover{
+.logo-info span{
 
-    color:var(--dorado);
+font-size:12px;
 
-}
+letter-spacing:2px;
 
-.nav-menu a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--dorado);
-
-    transition:.35s;
+color:var(--dorado);
 
 }
 
-.nav-menu a:hover::after{
+.menu{
 
-    width:100%;
+display:flex;
+
+gap:35px;
 
 }
 
-/*========== BOTÓN ==========*/
+.menu a{
+
+color:white;
+
+font-size:16px;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:var(--dorado);
+
+}
 
 .btn-header{
 
-    background:var(--dorado);
+background:var(--dorado);
 
-    color:#111;
+color:black;
 
-    padding:15px 28px;
+padding:15px 28px;
 
-    border-radius:40px;
+border-radius:35px;
 
-    font-weight:700;
+font-weight:700;
 
-    transition:.35s;
+transition:.3s;
 
 }
 
 .btn-header:hover{
 
-    transform:translateY(-3px);
+transform:translateY(-3px);
 
 }
 
-/*========== MENÚ MÓVIL ==========*/
+.menu-mobile{
 
-.menu-toggle{
-
-    display:none;
-
-    color:white;
-
-    font-size:34px;
-
-    cursor:pointer;
+display:none;
 
 }
 
-/*==================================================
-RESPONSIVE HEADER
-==================================================*/
+/*=========================================
+HERO
+=========================================*/
 
-@media (max-width:900px){
+.hero{
 
-.nav-menu{
+padding-top:150px;
+
+padding-bottom:80px;
+
+background:var(--negro);
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:70px;
+
+}
+
+.hero-etiqueta{
+
+display:inline-block;
+
+margin-bottom:20px;
+
+color:var(--dorado);
+
+font-size:14px;
+
+letter-spacing:2px;
+
+font-weight:600;
+
+text-transform:uppercase;
+
+}
+
+.hero-texto h1{
+
+font-size:82px;
+
+line-height:0.95;
+
+font-weight:800;
+
+margin-bottom:30px;
+
+}
+
+.hero-texto h1 span{
+
+color:var(--dorado);
+
+}
+
+.hero-texto h3{
+
+font-size:34px;
+
+line-height:1.4;
+
+font-weight:500;
+
+margin-bottom:35px;
+
+}
+
+.hero-texto p{
+
+font-size:22px;
+
+line-height:1.8;
+
+color:var(--gris);
+
+max-width:620px;
+
+}
+
+.hero-botones{
+
+display:flex;
+
+gap:20px;
+
+margin-top:45px;
+
+flex-wrap:wrap;
+
+}
+
+.btn-principal{
+
+background:var(--dorado);
+
+color:#000;
+
+padding:18px 35px;
+
+border-radius:40px;
+
+font-size:18px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.btn-principal:hover{
+
+transform:translateY(-4px);
+
+}
+
+.btn-secundario{
+
+border:2px solid var(--dorado);
+
+color:var(--dorado);
+
+padding:18px 35px;
+
+border-radius:40px;
+
+font-size:18px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.btn-secundario:hover{
+
+background:var(--dorado);
+
+color:#000;
+
+}
+
+.hero-imagen{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.hero-imagen img{
+
+width:100%;
+
+max-width:560px;
+
+border-radius:28px;
+
+box-shadow:0 35px 80px rgba(0,0,0,.45);
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:980px){
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:40px;
+
+}
+
+.hero-texto{
+
+order:2;
+
+}
+
+.hero-imagen{
+
+order:1;
+
+}
+
+.hero-texto h1{
+
+font-size:52px;
+
+}
+
+.hero-texto h3{
+
+font-size:26px;
+
+}
+
+.hero-texto p{
+
+font-size:18px;
+
+margin:auto;
+
+}
+
+.hero-botones{
+
+justify-content:center;
+
+}
+
+.menu{
 
 display:none;
 
@@ -285,46 +451,33 @@ display:none;
 
 }
 
-.menu-toggle{
+.menu-mobile{
 
 display:block;
 
+font-size:34px;
+
+color:white;
+
+background:none;
+
+border:none;
+
+cursor:pointer;
+
 }
 
-.logo-texto h1{
+.logo-info h2{
 
 font-size:18px;
 
 }
 
-.logo-texto span{
+.logo-info span{
 
-font-size:11px;
-
-letter-spacing:1px;
-
-}
-
-.logo-vs{
-
-width:48px;
-
-height:48px;
-
-font-size:20px;
-
-}
-
-.header{
-
-height:80px;
-
-}
-
-.navbar{
-
-height:80px;
+font-size:10px;
 
 }
 
 }
+
